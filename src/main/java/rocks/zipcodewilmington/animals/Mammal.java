@@ -21,12 +21,18 @@ public abstract class Mammal implements Animal {
         this.id = id;
     }
 
+    public Mammal() {
+        this.id = 0;
+        this.eatenMeals = new ArrayList<>();
+    }
+
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public String setName(String name) {
         this.name = name;
+        return name;
     }
 
     public Date getBirthDate() {
