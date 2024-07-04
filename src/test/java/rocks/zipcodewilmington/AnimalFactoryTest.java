@@ -17,19 +17,21 @@ public class AnimalFactoryTest {
     //TODO - Create Test for `Animal createDog(String name, Date birthDate)`
     @Test
     public void createDog() {
-        AnimalFactory factory = new AnimalFactory();
-        Dog dog = factory.createDog("Bert", new Date());
-        dog.getName();
+        Dog dog = AnimalFactory.createDog("Bert", new Date());
         Assert.assertEquals("Bert", dog.getName());
-
+//
+//        AnimalFactory factory = new AnimalFactory();
+//        Dog dog = factory.createDog("Bert", new Date());
+//        Assert.assertEquals("Bert", dog.getName());
     }
 
     //TODO - Create Test for `Animal createCat(String name, Date birthDate)`
     @Test
     public void createCat() {
-        AnimalFactory factory = new AnimalFactory();
-        Cat cat = factory.createCat("Millie", new Date());
-        cat.getName();
+        Cat cat = AnimalFactory.createCat("Millie", new Date());
         Assert.assertEquals("Millie", cat.getName());
+//        AnimalFactory factory = new AnimalFactory();
+//        Cat cat = factory.createCat("Millie", new Date());
+//        Assert.assertEquals("Millie", cat.getName());
     }
 }

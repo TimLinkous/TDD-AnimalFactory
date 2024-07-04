@@ -30,6 +30,7 @@ public class DogHouseTest {
     // TODO - Create tests for `void remove(Dog dog)`
     @Test
     public void testRemoveDogByID() {
+        DogHouse.clear();
         Dog dog = new Dog();//create new dog
         DogHouse.add(dog);//adding to the doghouse
         Integer expected = 0; //argument to be compared with
@@ -39,13 +40,15 @@ public class DogHouseTest {
     // TODO - Create tests for `Dog getDogById(Integer id)`
     @Test
     public void testGetByID(){
-        DogHouse.getDogById(0);//get dog by ID 0
-        Integer expected = 1;// 1 dog in doghouse
-        Assert.assertEquals(expected, DogHouse.getNumberOfDogs());
+        Dog dog = new Dog("Spot", new Date(), 25);//create new dog
+        DogHouse.add(dog);//add dog to doghouse
+        Dog dogID = DogHouse.getDogById(25);//get dog by ID 25
+        Assert.assertEquals(dog, dogID); //expected is new dog - actual is the dogID
     }
 
     @Test
     public void testRemoveNumberOfDogs() {
+        DogHouse.clear();
         Dog dog = new Dog();//create new dog
         DogHouse.add(dog);//adding to the doghouse
         Integer expected = 0; //argument to be compared with
@@ -55,6 +58,7 @@ public class DogHouseTest {
     // TODO - Create tests for `Integer getNumberOfDogs()`
     @Test
     public void testInteger(){
+        DogHouse.clear();
         Dog dog = new Dog();//create new dog
         DogHouse.add(dog);//adding to the doghouse
         Integer expected = 1;// 1 dog in doghouse

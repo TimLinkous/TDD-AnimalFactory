@@ -33,6 +33,7 @@ public class CatHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     @Test
     public void testRemoveCatByID() {
+        CatHouse.clear();
         Cat cat = new Cat();
         CatHouse.add(cat);
         Integer expected = 0;
@@ -42,7 +43,8 @@ public class CatHouseTest {
 
     // TODO - Create tests for `void remove(Cat cat)`
     @Test
-    public void testRemoveNumberOfDogs() {
+    public void testRemoveNumberOfCats() {
+        CatHouse.clear();
         Cat cat = new Cat();
         CatHouse.add(cat);
         Integer expected = 0;
@@ -52,13 +54,15 @@ public class CatHouseTest {
         // TODO - Create tests for `Cat getCatById(Integer id)`
         @Test
         public void testGetByID(){
-            CatHouse.getCatById(0);
-            Integer expected = 1;
-            Assert.assertEquals(expected, CatHouse.getNumberOfCats());
+            Cat cat = new Cat("Fluffy", new Date(), 100);
+            CatHouse.add(cat);
+            Cat catID = CatHouse.getCatById(100);
+            Assert.assertEquals(cat, catID);
         }
         // TODO - Create tests for `Integer getNumberOfCats()`
         @Test
-        public void testInteger(){
+        public void testIntegerGetNumberOfTest(){
+            CatHouse.clear();
             Cat cat = new Cat();
             CatHouse.add(cat);
             Integer expected = 1;
