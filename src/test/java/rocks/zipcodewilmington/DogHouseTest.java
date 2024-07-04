@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  * @author leon on 4/19/18.
- */
+ *////Several will pass individually but not when run all tests at once?
 public class DogHouseTest {
     // TODO - Create tests for `void add(Dog dog)`
     @Test
@@ -61,3 +61,4 @@ public class DogHouseTest {
         Assert.assertEquals(expected, DogHouse.getNumberOfDogs());
     }
 }
+///Several will pass individually but not when run all tests at once?
